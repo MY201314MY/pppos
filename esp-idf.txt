@@ -1,0 +1,11 @@
+(.venv) pi@inspiron:~/espressif/esp-adf/esp-idf$ git log -n 1
+commit 3c8bc2213cd5719d0c61ae9465a188eac83dfd70 (HEAD)
+Merge: 188bb8df22 ac67d5dd35
+Author: Jiang Jiang Jian <jack@espressif.com>
+Date:   Mon Mar 20 14:05:42 2023 +0800
+
+    Merge branch 'feature/esp32c3_uart_add_wakeup_event_v4.4' into 'release/v4.4'
+    
+    UART: add uart wakeup event for esp32c3 and esp32s3 (v4.4)
+    
+    See merge request espressif/esp-idf!22647
