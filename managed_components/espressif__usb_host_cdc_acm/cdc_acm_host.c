@@ -340,7 +340,7 @@ static esp_err_t cdc_acm_find_and_open_usb_device(uint16_t vid, uint16_t pid, in
     vTaskSetTimeOutState(&connection_timeout);
 
     do {
-        ESP_LOGD(TAG, "Checking list of connected USB devices");
+        /* ESP_LOGD(TAG, "Checking list of connected USB devices"); */
         uint8_t dev_addr_list[10];
         int num_of_devices;
         ESP_ERROR_CHECK(usb_host_device_addr_list_fill(sizeof(dev_addr_list), dev_addr_list, &num_of_devices));

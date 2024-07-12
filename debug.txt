@@ -1,0 +1,640 @@
+pi@inspiron:~/example/USB/pppos_client$ idf.py monitor 
+/home/pi/espressif/esp-adf/esp-idf/tools/check_python_dependencies.py:12: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  import pkg_resources
+Executing action: monitor
+Serial port /dev/ttyUSB0
+Connecting....
+Detecting chip type... ESP32-S3
+Running idf_monitor in directory /home/pi/example/USB/pppos_client
+Executing "/home/pi/.espressif/python_env/idf4.4_py3.10_env/bin/python /home/pi/espressif/esp-adf/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 /home/pi/example/USB/pppos_client/build/pppos_client.elf -m '/home/pi/.espressif/python_env/idf4.4_py3.10_env/bin/python' '/home/pi/espressif/esp-adf/esp-idf/tools/idf.py'"...
+--- idf_monitor on /dev/ttyUSB0 115200 ---
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3808,len:0x163c
+load:0x403c9700,len:0xbcc
+load:0x403cc700,len:0x301c
+entry 0x403c9954
+I (24) boot: ESP-IDF v4.4.4-278-g3c8bc2213c 2nd stage bootloader
+I (25) boot: compile time 14:35:35
+I (25) boot: chip revision: v0.1
+I (28) boot.esp32s3: Boot SPI Speed : 80MHz
+I (33) boot.esp32s3: SPI Mode       : DIO
+I (37) boot.esp32s3: SPI Flash Size : 2MB
+I (42) boot: Enabling RNG early entropy source...
+I (48) boot: Partition Table:
+I (51) boot: ## Label            Usage          Type ST Offset   Length
+I (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (73) boot:  2 factory          factory app      00 00 00010000 00100000
+I (81) boot: End of partition table
+I (85) esp_image: segment 0: paddr=00010020 vaddr=3c080020 size=231e8h (143848) map
+I (119) esp_image: segment 1: paddr=00033210 vaddr=3fc92540 size=02358h (  9048) load
+I (121) esp_image: segment 2: paddr=00035570 vaddr=40374000 size=0aaa8h ( 43688) load
+I (135) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=754e4h (480484) map
+I (221) esp_image: segment 4: paddr=000b550c vaddr=4037eaa8 size=03a98h ( 15000) load
+I (230) boot: Loaded app from partition at offset 0x10000
+I (230) boot: Disabling RNG early entropy source...
+I (242) cpu_start: Pro cpu up.
+I (242) cpu_start: Starting app cpu, entry point is 0x403752f8
+0x403752f8: call_start_cpu1 at /home/pi/espressif/esp-adf/esp-idf/components/esp_system/port/cpu_start.c:148
+
+I (0) cpu_sta t24A)pecpu : .n [0US
+BLK2__DATA4_REG is used 2 bits starting with 0 bit
+D (250) efuse: In EFUSE_BLK2__DATA4_REG is used 8 bits starting with 13 bit
+D (257) efuse: In EFUSE_BLK1__DATA3_REG is used 3 bits starting with 24 bit
+D (264) efuse: In EFUSE_BLK2__DATA4_REG is used 2 bits starting with 0 bit
+D (271) efuse: In EFUSE_BLK1__DATA4_REG is used 7 bits starting with 20 bit
+D (278) efuse: In EFUSE_BLK1__DATA5_REG is used 8 bits starting with 3 bit
+D (284) efuse: In EFUSE_BLK1__DATA5_REG is used 5 bits starting with 11 bit
+D (292) efuse: In EFUSE_BLK1__DATA4_REG is used 7 bits starting with 13 bit
+D (299) efuse: In EFUSE_BLK1__DATA4_REG is used 7 bits starting with 20 bit
+D (306) efuse: In EFUSE_BLK1__DATA4_REG is used 5 bits starting with 27 bit
+D (313) efuse: In EFUSE_BLK1__DATA5_REG is used 3 bits starting with 0 bit
+D (320) efuse: In EFUSE_BLK1__DATA5_REG is used 8 bits starting with 3 bit
+D (326) efuse: In EFUSE_BLK1__DATA4_REG is used 7 bits starting with 13 bit
+D (334) efuse: In EFUSE_BLK1__DATA4_REG is used 7 bits starting with 20 bit
+D (341) efuse: In EFUSE_BLK1__DATA4_REG is used 5 bits starting with 27 bit
+D (348) efuse: In EFUSE_BLK1__DATA5_REG is used 3 bits starting with 0 bit
+D (355) efuse: In EFUSE_BLK1__DATA5_REG is used 8 bits starting with 3 bit
+D (370) clk: RTC_SLOW_CLK calibration value: 4043610
+I (378) cpu_start: Pro cpu start user code
+I (378) cpu_start: cpu freq: 160000000
+I (378) cpu_start: Application information:
+I (381) cpu_start: Project name:     pppos_client
+I (386) cpu_start: App version:      bb69919-dirty
+I (392) cpu_start: Compile time:     Jul 12 2024 14:35:32
+I (398) cpu_start: ELF file SHA256:  0798e4afc57ebadb...
+I (404) cpu_start: ESP-IDF:          v4.4.4-278-g3c8bc2213c
+I (410) cpu_start: Min chip rev:     v0.0
+I (415) cpu_start: Max chip rev:     v0.99 
+I (420) cpu_start: Chip rev:         v0.1
+D (424) memory_layout: Checking 5 reserved memory ranges:
+D (430) memory_layout: Reserved memory range 0x3fc84000 - 0x3fc92540
+D (436) memory_layout: Reserved memory range 0x3fc92540 - 0x3fc96408
+D (443) memory_layout: Reserved memory range 0x3fceee34 - 0x3fcf0000
+D (449) memory_layout: Reserved memory range 0x40374000 - 0x40382540
+0x40374000: _WindowOverflow4 at /home/pi/espressif/esp-adf/esp-idf/components/freertos/port/xtensa/xtensa_vectors.S:1739
+
+D (455) memory_layout: Reserved memory range 0x600fe000 - 0x600fe000
+D (462) memory_layout: Building list of available memory regions:
+D (468) memory_layout: Available memory region 0x3fc96408 - 0x3fca0000
+D (475) memory_layout: Available memory region 0x3fca0000 - 0x3fcb0000
+D (481) memory_layout: Available memory region 0x3fcb0000 - 0x3fcc0000
+D (488) memory_layout: Available memory region 0x3fcc0000 - 0x3fcd0000
+D (494) memory_layout: Available memory region 0x3fcd0000 - 0x3fce0000
+D (501) memory_layout: Available memory region 0x3fce0000 - 0x3fce9710
+D (508) memory_layout: Available memory region 0x3fce9710 - 0x3fceee34
+D (514) memory_layout: Available memory region 0x3fcf0000 - 0x3fcf8000
+D (521) memory_layout: Available memory region 0x600fe000 - 0x60100000
+I (527) heap_init: Initializing. RAM available for dynamic allocation:
+D (535) heap_init: New heap initialised at 0x3fc96408
+I (540) heap_init: At 3FC96408 len 00053308 (332 KiB): D/IRAM
+I (546) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DIRAM
+D (553) heap_init: New heap initialised at 0x3fcf0000
+I (558) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+D (564) heap_init: New heap initialised at 0x600fe000
+I (569) heap_init: At 600FE000 len 00002000 (8 KiB): RTCRAM
+D (576) FLASH_HAL: extra_dummy: 0
+D (579) spi_flash: trying chip: issi
+D (583) spi_flash: trying chip: gd
+D (586) spi_flash: trying chip: mxic
+D (590) spi_flash: trying chip: winbond
+D (594) spi_flash: trying chip: boya
+D (597) spi_flash: trying chip: th
+D (601) spi_flash: trying chip: mxic (opi)
+D (605) spi_flash: trying chip: generic
+I (609) spi_flash: detected chip: generic
+I (614) spi_flash: flash io: dio
+W (618) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.
+D (630) cpu_start: calling init function: 0x42061e9c
+0x42061e9c: _GLOBAL__sub_I__ZN9__gnu_cxx9__freeresEv at /builds/idf/crosstool-NG/.build/xtensa-esp32s3-elf/src/gcc/libstdc++-v3/libsupc++/eh_alloc.cc:348
+
+D (636) cpu_start: calling init function: 0x42061c4c
+0x42061c4c: _GLOBAL__sub_I___cxa_get_globals_fast at /builds/idf/crosstool-NG/.build/xtensa-esp32s3-elf/src/gcc/libstdc++-v3/libsupc++/eh_globals.cc:145
+
+D (641) cpu_start: calling init function: 0x4205b6c8
+0x4205b6c8: esp_ds_conn_lock at /home/pi/espressif/esp-adf/esp-idf/components/mbedtls/port/esp_ds/esp_rsa_sign_alt.c:60
+
+D (646) cpu_start: calling init function: 0x42025634
+0x42025634: s_set_default_wifi_log_level at /home/pi/espressif/esp-adf/esp-idf/components/esp_wifi/src/wifi_init.c:63
+
+D (651) cpu_start: calling init function: 0x4201ec4c
+0x4201ec4c: esp_ipc_init at /home/pi/espressif/esp-adf/esp-idf/components/esp_ipc/src/esp_ipc.c:105
+
+D (656) cpu_start: calling init function: 0x42002b7c
+0x42002b7c: esp_ota_init_app_elf_sha256 at /home/pi/espressif/esp-adf/esp-idf/components/app_update/esp_app_desc.c:68
+
+D (661) intr_alloc: Connected src 59 to int 2 (cpu 0)
+I (666) sleep: Configure to isolate all GPIO pins in sleep state
+I (673) sleep: Enable automatic switching of GPIO sleep configuration
+D (680) intr_alloc: Connected src 79 to int 3 (cpu 0)
+I (685) cpu_start: Starting scheduler on PRO CPU.
+D (690) intr_alloc: Connected src 57 to int 9 (cpu 0)
+D (690) intr_alloc: Connected src 80 to int 2 (cpu 1)
+I (700) cpu_start: Starting scheduler on APP CPU.
+D (700) intr_alloc: Connected src 58 to int 3 (cpu 1)
+D (710) heap_init: New heap initialised at 0x3fce9710
+D (710) intr_alloc: Connected src 52 to int 12 (cpu 0)
+D (720) esp_netif_lwip: LwIP stack has been initialized
+D (720) esp_netif_lwip: esp-netif has been successfully initialized
+D (730) event: running task for loop 0x3fceb1d8
+D (730) event: created task for loop 0x3fceb1d8
+D (740) event: created event loop 0x3fceb1d8
+D (740) esp_netif_objects: esp_netif_add_to_list 0x3fcec17c
+D (750) esp_netif_objects: esp_netif_add_to_list netif added successfully (total netifs: 1)
+D (760) esp-netif_lwip-ppp: esp_netif_new_ppp: PPP connection created: 0x3fcec4ac
+D (760) esp-netif_lwip-ppp: Phase Dead
+I (770) pppos_example: Initializing esp_modem for the BG96 module...
+I (770) pppos_example: Waiting for USB device connection...
+D (780) intr_alloc: Connected src 38 to int 13 (cpu 0)
+D (820) usb_terminal: USB Host installed
+D (820) cdc_acm: Checking list of opened USB devices
+D (1130) HUB: Root port reset
+D (1130) HUB: Stage done: START
+D (1130) HUB: Stage done: GET_SHORT_DEV_DESC
+E (1130) HUB: Bad transfer status 1: CHECK_SHORT_DEV_DESC
+E (1130) HUB: Stage failed: CHECK_SHORT_DEV_DESC
+D (1140) HUB: Stage done: CLEANUP_FAILED
+D (7910) HUB: Recovering root port
+D (20480) HUB: Root port reset
+D (20480) HUB: Stage done: START
+D (20480) HUB: Stage done: GET_SHORT_DEV_DESC
+D (20480) HUB: Stage done: CHECK_SHORT_DEV_DESC
+D (20540) HUB: Stage done: SECOND_RESET
+D (20540) HUB: Stage done: SET_ADDR
+D (20540) HUB: Stage done: CHECK_ADDR
+D (20540) HUB: Stage done: GET_FULL_DEV_DESC
+D (20540) HUB: Stage done: CHECK_FULL_DEV_DESC
+D (20540) HUB: Stage done: GET_SHORT_CONFIG_DESC
+D (20550) HUB: Stage done: CHECK_SHORT_CONFIG_DESC
+D (20550) HUB: Stage done: GET_FULL_CONFIG_DESC
+D (20560) HUB: Stage done: CHECK_FULL_CONFIG_DESC
+D (20560) HUB: Stage done: SET_CONFIG
+D (20570) HUB: Stage done: CHECK_CONFIG
+D (20570) HUB: Stage done: GET_SHORT_LANGID_TABLE
+D (20580) HUB: Stage done: CHECK_SHORT_LANGID_TABLE
+D (20580) HUB: Stage done: GET_FULL_LANGID_TABLE
+D (20590) HUB: Stage done: CHECK_FULL_LANGID_TABLE
+D (20590) HUB: Stage done: GET_SHORT_MANU_STR_DESC
+D (20590) HUB: Stage done: CHECK_SHORT_MANU_STR_DESC
+D (20600) HUB: Stage done: GET_FULL_MANU_STR_DESC
+D (20600) HUB: Stage done: CHECK_FULL_MANU_STR_DESC
+D (20610) HUB: Stage done: GET_SHORT_PROD_STR_DESC
+D (20610) HUB: Stage done: CHECK_SHORT_PROD_STR_DESC
+D (20620) HUB: Stage done: GET_FULL_PROD_STR_DESC
+D (20620) HUB: Stage done: CHECK_FULL_PROD_STR_DESC
+D (20630) HUB: Stage done: GET_SHORT_SER_STR_DESC
+D (20630) HUB: Stage done: CHECK_SHORT_SER_STR_DESC
+D (20640) HUB: Stage done: GET_FULL_SER_STR_DESC
+D (20640) HUB: Stage done: CHECK_FULL_SER_STR_DESC
+D (20650) HUB: Stage done: CLEANUP
+D (20650) USBH: Processing actions 0x100
+D (20660) USBH: New device 1
+D (20660) cdc_acm: New device connected
+D (20660) CDC_ACM: Submitting poll for BULK IN transfer
+D (20670) CDC_ACM: Submitting poll for INTR IN transfer
+I (20670) pppos_example: Modem connected, waiting 10 seconds for boot...
+D (20700) CDC_ACM: notif xfer cb
+D (20700) usb_terminal: Ignored USB event 1
+D (20700) CDC_ACM: Submitting poll for INTR IN transfer
+D (30680) usb_terminal: 0x3fca09f8   41 54 2b 43 53 51 0d                              |AT+CSQ.|
+D (30680) CDC_ACM: Submitting BULK OUT transfer
+D (30680) CDC_ACM: out/ctrl xfer cb
+D (30680) CDC_ACM: in xfer cb
+D (30680) usb_terminal: 0x3fca121c   41 54 2b 43 53 51 0d 0d  0a 2b 43 53 51 3a 20 32  |AT+CSQ...+CSQ: 2|
+D (30690) usb_terminal: 0x3fca122c   38 2c 39 39 0d 0a 0d 0a  4f 4b 0d 0a              |8,99....OK..|
+D (30700) CDC_ACM: Submitting poll for BULK IN transfer
+D (30710) CDC_ACM: notif xfer cb
+D (30710) usb_terminal: Ignored USB event 1
+D (30720) CDC_ACM: Submitting poll for INTR IN transfer
+I (30720) pppos_example: Signal quality: rssi=28, ber=99
+D (30730) command_lib: generic_command command ATE0
+
+D (30730) usb_terminal: 0x3fca0978   41 54 45 30 0d                                    |ATE0.|
+D (30740) CDC_ACM: Submitting BULK OUT transfer
+D (30750) CDC_ACM: out/ctrl xfer cb
+D (30750) CDC_ACM: in xfer cb
+D (30750) usb_terminal: 0x3fca121c   41 54 45 30 0d                                    |ATE0.|
+D (30760) CDC_ACM: Submitting poll for BULK IN transfer
+D (30770) CDC_ACM: in xfer cb
+D (30770) usb_terminal: 0x3fca1221   0d 0a 4f 4b 0d 0a                                 |..OK..|
+D (30780) command_lib: Response: 
+OK
+
+
+D (30780) CDC_ACM: Submitting poll for BULK IN transfer
+D (30790) CDC_ACM: notif xfer cb
+D (30790) usb_terminal: Ignored USB event 1
+D (30800) CDC_ACM: Submitting poll for INTR IN transfer
+D (30800) command_lib: generic_command command AT+CGDCONT=1,"IP","super"
+
+D (30810) usb_terminal: 0x3fcf5bb4   41 54 2b 43 47 44 43 4f  4e 54 3d 31 2c 22 49 50  |AT+CGDCONT=1,"IP|
+D (30820) usb_terminal: 0x3fcf5bc4   22 2c 22 73 75 70 65 72  22 0d                    |","super".|
+D (30830) CDC_ACM: Submitting BULK OUT transfer
+D (30830) CDC_ACM: out/ctrl xfer cb
+D (30840) CDC_ACM: in xfer cb
+D (30840) usb_terminal: 0x3fca121c   0d 0a 4f 4b 0d 0a                                 |..OK..|
+D (30850) command_lib: Response: 
+OK
+
+
+D (30850) CDC_ACM: Submitting poll for BULK IN transfer
+D (30860) CDC_ACM: notif xfer cb
+D (30860) usb_terminal: Ignored USB event 1
+D (30860) CDC_ACM: Submitting poll for INTR IN transfer
+D (30870) command_lib: generic_command command ATD*99#
+
+D (30870) usb_terminal: 0x3fca0988   41 54 44 2a 39 39 23 0d                           |ATD*99#.|
+D (30880) CDC_ACM: Submitting BULK OUT transfer
+D (30890) CDC_ACM: out/ctrl xfer cb
+D (30900) CDC_ACM: in xfer cb
+D (30900) usb_terminal: 0x3fca121c   0d 0a 43 4f 4e 4e 45 43  54 20 31 35 30 30 30 30  |..CONNECT 150000|
+D (30900) usb_terminal: 0x3fca122c   30 30 30 0d 0a                                    |000..|
+D (30910) command_lib: Response: 
+CONNECT 150000000
+
+
+D (30920) CDC_ACM: Submitting poll for BULK IN transfer
+D (30920) CDC_ACM: notif xfer cb
+D (30930) usb_terminal: Ignored USB event 1
+D (30930) CDC_ACM: Submitting poll for INTR IN transfer
+D (30940) esp_netif_handlers: esp_netif action has started with netif0x3fcec17c from event_id=0
+D (30940) CDC_ACM: notif xfer cb
+D (30950) usb_terminal: Ignored USB event 1
+D (30950) CDC_ACM: Submitting poll for INTR IN transfer
+D (30960) esp-netif_lwip-ppp: esp_netif_start_ppp: Starting PPP connection: 0x3fcec4ac
+D (30970) esp-netif_lwip-ppp: Phase Start
+D (30970) esp-netif_lwip-ppp: Phase Establish
+D (30980) usb_terminal: 0x3fcf61c0   7e ff 7d 23 c0 21 7d 21  7d 21 7d 20 7d 34 7d 22  |~.}#.!}!}!} }4}"|
+D (30980) usb_terminal: 0x3fcf61d0   7d 26 7d 20 7d 20 7d 20  7d 20 7d 25 7d 26 86 64  |}&} } } } }%}&.d|
+D (30990) usb_terminal: 0x3fcf61e0   7d 28 7d 3f 7d 27 7d 22  7d 28 7d 22 6b f3 7e     |}(}?}'}"}(}"k.~|
+D (31000) CDC_ACM: Submitting BULK OUT transfer
+D (31010) CDC_ACM: out/ctrl xfer cb
+D (31010) esp_netif_lwip: check: remote, if=0x3fcec17c fn=0x420247a8
+0x420247a8: esp_netif_update_default_netif_lwip at /home/pi/espressif/esp-adf/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:195
+
+
+D (31020) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fcec17c
+D (31030) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (31020) CDC_ACM: in xfer cb
+D (31030) usb_terminal: 0x3fca121c   7e ff 7d 23 c0 21 7d 21  7d 20 7d 20 7d 39 7d 22  |~.}#.!}!} } }9}"|
+D (31040) usb_terminal: 0x3fca122c   7d 26 7d 20 7d 20 7d 20  7d 20 7d 23 7d 25 c2 23  |}&} } } } }#}%.#|
+D (31050) usb_terminal: 0x3fca123c   7d 25 7d 25 7d 26 d1 7d  2f da 69 7d 27 7d 22 7d  |}%}%}&.}/.i}'}"}|
+D (31060) usb_terminal: 0x3fca124c   28 7d 22 f0 ff 7e 7e ff  7d 23 c0 21 7d 22 7d 21  |(}"..~~.}#.!}"}!|
+D (31070) usb_terminal: 0x3fca125c   7d 20 7d 34 7d 22 7d 26  7d 20 7d 20 7d 20 7d 20  |} }4}"}&} } } } |
+D (31080) usb_terminal: 0x3fca126c   7d 25 7d 26 86 64 7d 28  7d 3f 7d 27 7d 22 7d 28  |}%}&.d}(}?}'}"}(|
+D (31090) usb_terminal: 0x3fca127c   7d 22 80 9a 7e                                    |}"..~|
+D (31100) usb_terminal: 0x3fcf6dbc   7e ff 7d 23 c0 21 7d 24  7d 20 7d 20 7d 29 7d 23  |~.}#.!}$} } })}#|
+D (31110) usb_terminal: 0x3fcf6dcc   7d 25 c2 23 7d 25 f8 60  7e                       |}%.#}%.`~|
+D (31120) CDC_ACM: Submitting BULK OUT transfer
+D (31120) CDC_ACM: Submitting poll for BULK IN transfer
+D (31130) CDC_ACM: out/ctrl xfer cb
+D (31130) CDC_ACM: in xfer cb
+D (31140) usb_terminal: 0x3fca121c   7e ff 7d 23 c0 21 7d 21  7d 21 7d 20 7d 34 7d 22  |~.}#.!}!}!} }4}"|
+D (31150) usb_terminal: 0x3fca122c   7d 26 7d 20 7d 20 7d 20  7d 20 7d 25 7d 26 d1 7d  |}&} } } } }%}&.}|
+D (31160) usb_terminal: 0x3fca123c   2f da 69 7d 27 7d 22 7d  28 7d 22 7d 35 e0 7e     |/.i}'}"}(}"}5.~|
+D (31170) usb_terminal: 0x3fcf6dbc   7e ff 7d 23 c0 21 7d 22  7d 21 7d 20 7d 34 7d 22  |~.}#.!}"}!} }4}"|
+D (31170) usb_terminal: 0x3fcf6dcc   7d 26 7d 20 7d 20 7d 20  7d 20 7d 25 7d 26 d1 7d  |}&} } } } }%}&.}|
+D (31180) usb_terminal: 0x3fcf6ddc   2f da 69 7d 27 7d 22 7d  28 7d 22 fe 89 7e        |/.i}'}"}(}"..~|
+D (31190) CDC_ACM: Submitting BULK OUT transfer
+D (31200) CDC_ACM: Submitting poll for BULK IN transfer
+D (31200) CDC_ACM: out/ctrl xfer cb
+D (31210) esp-netif_lwip-ppp: Phase Authenticate
+D (31210) esp-netif_lwip-ppp: Phase Network
+D (31220) usb_terminal: 0x3fcf6dbc   7e ff 03 80 21 01 01 00  1c 02 06 00 2d 0f 01 03  |~...!.......-...|
+D (31230) usb_terminal: 0x3fcf6dcc   06 00 00 00 00 81 06 00  00 00 00 83 06 00 00 00  |................|
+D (31240) usb_terminal: 0x3fcf6ddc   00 55 15 7e                                       |.U.~|
+D (31240) CDC_ACM: Submitting BULK OUT transfer
+D (31250) CDC_ACM: out/ctrl xfer cb
+D (31250) CDC_ACM: in xfer cb
+D (31250) usb_terminal: 0x3fca121c   7e ff 7d 23 c0 21 7d 2b  7d 22 7d 20 7d 28 d1 7d  |~.}#.!}+}"} }(.}|
+D (31260) usb_terminal: 0x3fca122c   2f da 69 e7 a0 7e                                 |/.i..~|
+D (31270) CDC_ACM: Submitting poll for BULK IN transfer
+D (31280) CDC_ACM: in xfer cb
+D (31280) usb_terminal: 0x3fca121c   7e 80 21 01 00 00 04 67  c3 7e 7e 80 21 04 01 00  |~.!....g.~~.!...|
+D (31290) usb_terminal: 0x3fca122c   0a 02 06 00 2d 0f 01 f8  30 7e                    |....-...0~|
+D (31300) usb_terminal: 0x3fcf6dbc   7e ff 03 80 21 03 00 00  0a 03 06 00 00 00 00 a0  |~...!...........|
+D (31310) usb_terminal: 0x3fcf6dcc   3d 7e                                             |=~|
+D (31320) CDC_ACM: Submitting BULK OUT transfer
+D (31320) CDC_ACM: Submitting poll for BULK IN transfer
+D (31330) CDC_ACM: out/ctrl xfer cb
+D (31330) usb_terminal: 0x3fcf6dbc   7e ff 03 80 21 01 02 00  16 03 06 00 00 00 00 81  |~...!...........|
+D (31340) usb_terminal: 0x3fcf6dcc   06 00 00 00 00 83 06 00  00 00 00 da 82 7e        |.............~|
+D (31350) CDC_ACM: Submitting BULK OUT transfer
+D (31360) CDC_ACM: out/ctrl xfer cb
+D (31360) CDC_ACM: in xfer cb
+D (31360) usb_terminal: 0x3fca121c   7e 80 21 01 01 00 04 bb  99 7e                    |~.!......~|
+D (31370) usb_terminal: 0x3fcf6dbc   7e ff 03 80 21 02 01 00  04 cd 92 7e              |~...!......~|
+D (31380) CDC_ACM: Submitting BULK OUT transfer
+D (31390) CDC_ACM: Submitting poll for BULK IN transfer
+D (31390) CDC_ACM: out/ctrl xfer cb
+D (31390) CDC_ACM: in xfer cb
+D (31400) usb_terminal: 0x3fca121c   7e 80 21 03 02 00 16 03  06 0a 88 25 b0 81 06 78  |~.!........%...x|
+D (31410) usb_terminal: 0x3fca122c   50 50 50 83 06 dd 05 58  58 69 f9 7e              |PPP....XXi.~|
+D (31420) usb_terminal: 0x3fcf6dbc   7e ff 03 80 21 01 03 00  16 03 06 0a 88 25 b0 81  |~...!........%..|
+D (31430) usb_terminal: 0x3fcf6dcc   06 78 50 50 50 83 06 dd  05 58 58 ce 04 7e        |.xPPP....XX..~|
+D (31430) CDC_ACM: Submitting BULK OUT transfer
+D (31440) CDC_ACM: Submitting poll for BULK IN transfer
+D (31440) CDC_ACM: out/ctrl xfer cb
+D (31450) CDC_ACM: in xfer cb
+D (31450) usb_terminal: 0x3fca121c   7e 80 21 02 03 00 16 03  06 0a 88 25 b0 81 06 78  |~.!........%...x|
+D (31460) usb_terminal: 0x3fca122c   50 50 50 83 06 dd 05 58  58 58 67 7e              |PPP....XXXg~|
+I (31470) esp-netif_lwip-ppp: Connected
+I (31470) esp-netif_lwip-ppp: Name Server1: 120.80.80.80
+I (31480) esp-netif_lwip-ppp: Name Server2: 221.5.88.88
+D (31490) event: running post IP_EVENT:6 with handler 0x420082f8 and context 0x3fcec128 on loop 0x3fceb1d8
+0x420082f8: on_ip_event at /home/pi/example/USB/pppos_client/main/pppos_client_main.c:120
+
+D (31490) esp-netif_lwip-ppp: Phase Running
+D (31500) pppos_example: IP event! 6
+I (31500) pppos_example: Modem Connect to PPP Server
+I (31510) pppos_example: ~~~~~~~~~~~~~~
+I (31510) pppos_example: IP          : 10.136.37.176
+I (31520) pppos_example: Netmask     : 255.255.255.255
+I (31530) pppos_example: Gateway     : 10.64.64.64
+I (31530) pppos_example: Name Server1: 120.80.80.80
+I (31540) pppos_example: Name Server2: 221.5.88.88
+I (31540) pppos_example: ~~~~~~~~~~~~~~
+I (31550) pppos_example: GOT ip event!!!
+D (31550) event: running post IP_EVENT:6 with handler 0x4202320c and context 0x3fcf5b64 on loop 0x3fceb1d8
+0x4202320c: esp_netif_action_connected at /home/pi/espressif/esp-adf/esp-idf/components/esp_netif/esp_netif_handlers.c:44
+
+D (31560) esp_netif_handlers: esp_netif action connected with netif0x3fcec17c from event_id=6
+D (31570) esp_netif_lwip: check: remote, if=0x3fcec17c fn=0x42024048
+0x42024048: esp_netif_up_api at /home/pi/espressif/esp-adf/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:1276
+
+
+D (31500) CDC_ACM: Submitting poll for BULK IN transfer
+D (31580) esp_netif_lwip: esp_netif_up_api esp_netif:0x3fcec17c
+D (31590) esp_netif_lwip: check: local, if=0x3fcec17c fn=0x420247a8
+0x420247a8: esp_netif_update_default_netif_lwip at /home/pi/espressif/esp-adf/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:195
+
+
+D (31590) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fcec17c
+D (31600) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+I (31500) pppos_example: Waiting for IP address
+I (31610) system_api: Base MAC address is not set
+I (31620) system_api: read default base MAC address from EFUSE
+D (31620) efuse: In EFUSE_BLK1__DATA1_REG is used 8 bits starting with 8 bit
+D (31630) efuse: In EFUSE_BLK1__DATA1_REG is used 8 bits starting with 0 bit
+D (31640) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 24 bit
+D (31650) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 16 bit
+D (31650) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 8 bit
+D (31660) efuse: In EFUSE_BLK1__DATA0_REG is used 8 bits starting with 0 bit
+D (31670) MQTT_CLIENT: MQTT client_id=ESP32_e38E14
+D (31670) event: created event loop 0x3fcf691c
+D (31680) MQTT_CLIENT: Core selection disabled
+I (31680) pppos_example: Waiting for MQTT data
+D (31680) event: running post MQTT_EVENTS:7 with handler 0x42008100 and context 0x3fcf725c on loop 0x3fcf691c
+0x42008100: mqtt_event_handler at /home/pi/example/USB/pppos_client/main/pppos_client_main.c:66
+
+D (31700) pppos_example: Event dispatched from event loop base=MQTT_EVENTS, event_id=7
+I (31700) pppos_example: MQTT other event id: 7
+D (31710) esp-tls: host:mqtt.eclipseprojects.io: strlen 23
+D (31720) usb_terminal: 0x3fcf757c   7e 21 45 00 00 45 00 00  00 00 ff 11 c2 cf 0a 88  |~!E..E..........|
+D (31720) usb_terminal: 0x3fcf758c   25 b0 78 50 50 50 65 44  00 35 00 31 bf 46 30 96  |%.xPPPeD.5.1.F0.|
+D (31730) usb_terminal: 0x3fcf759c   01 00 00 01 00 00 00 00  00 00 04 6d 71 74 74 0f  |...........mqtt.|
+D (31740) usb_terminal: 0x3fcf75ac   65 63 6c 69 70 73 65 70  72 6f 6a 65 63 74 73 02  |eclipseprojects.|
+D (31750) usb_terminal: 0x3fcf75bc   69 6f 00 00 01 00 01 ce  22 7e                    |io......"~|
+D (31760) CDC_ACM: Submitting BULK OUT transfer
+D (31770) CDC_ACM: out/ctrl xfer cb
+D (31830) CDC_ACM: in xfer cb
+D (31830) usb_terminal: 0x3fca121c   7e 21 45 28 00 55 00 00  00 00 f3 11 ce 97 78 50  |~!E(.U........xP|
+D (31830) usb_terminal: 0x3fca122c   50 50 0a 88 25 b0 00 35  65 44 00 41 fa b9 30 96  |PP..%..5eD.A..0.|
+D (31840) usb_terminal: 0x3fca123c   81 80 00 01 00 01 00 00  00 00 04 6d 71 74 74 0f  |...........mqtt.|
+D (31850) usb_terminal: 0x3fca124c   65 63 6c 69 70 73 65 70  72 6f 6a 65 63 74 73 02  |eclipseprojects.|
+D (31860) usb_terminal: 0x3fca125c   69 6f 00 00 01 00 01 c0  0c 00 01 00 01 00 01 4d  |io.............M|
+D (31870) usb_terminal: 0x3fca126c   cf 00 04 89 87 53 d9 da  70 7e                    |.....S..p~|
+D (31880) CDC_ACM: Submitting poll for BULK IN transfer
+D (31880) esp-tls: [sock=54] Resolved IPv4 address: 137.135.83.217
+D (31890) esp-tls: [sock=54] Connecting to server. HOST: mqtt.eclipseprojects.io, Port: 1883
+D (31900) usb_terminal: 0x3fcf74fc   7e 21 45 00 00 2c 00 01  00 00 ff 06 ae 32 0a 88  |~!E..,.......2..|
+D (31910) usb_terminal: 0x3fcf750c   25 b0 89 87 53 d9 f2 77  07 5b 9c 76 7f 3a 00 00  |%...S..w.[.v.:..|
+D (31920) usb_terminal: 0x3fcf751c   00 00 60 02 16 70 5e ae  00 00 02 04 05 a0 37 c0  |..`..p^.......7.|
+D (31930) usb_terminal: 0x3fcf752c   7e                                                |~|
+D (31940) CDC_ACM: Submitting BULK OUT transfer
+D (31940) CDC_ACM: out/ctrl xfer cb
+D (32230) CDC_ACM: in xfer cb
+D (32230) usb_terminal: 0x3fca121c   7e 21 45 00 00 2c 00 00  40 00 27 06 46 34 89 87  |~!E..,..@.'.F4..|
+D (32230) usb_terminal: 0x3fca122c   53 d9 0a 88 25 b0 07 5b  f2 77 fb ae 9a ca 9c 76  |S...%..[.w.....v|
+D (32240) usb_terminal: 0x3fca123c   7f 3b 60 12 fa f0 e3 ca  00 00 02 04 05 78 99 72  |.;`..........x.r|
+D (32250) usb_terminal: 0x3fca124c   7e                                                |~|
+D (32260) usb_terminal: 0x3fca4024   7e 21 45 00 00 28 00 02  00 00 ff 06 ae 35 0a 88  |~!E..(.......5..|
+D (32270) usb_terminal: 0x3fca4034   25 b0 89 87 53 d9 f2 77  07 5b 9c 76 7f 3b fb ae  |%...S..w.[.v.;..|
+D (32280) usb_terminal: 0x3fca4044   9a cb 50 10 16 70 df cc  00 00 f5 05 7e           |..P..p......~|
+D (32290) CDC_ACM: Submitting BULK OUT transfer
+D (32300) CDC_ACM: Submitting poll for BULK IN transfer
+D (32300) CDC_ACM: out/ctrl xfer cb
+D (32300) MQTT_CLIENT: Transport connected to mqtt://mqtt.eclipseprojects.io:1883
+D (32310) MQTT_CLIENT: Sending MQTT CONNECT message, type: 1, id: 0000
+D (32320) usb_terminal: 0x3fca3a30   7e 21 45 00 00 42 00 03  00 00 ff 06 ae 1a 0a 88  |~!E..B..........|
+D (32330) usb_terminal: 0x3fca3a40   25 b0 89 87 53 d9 f2 77  07 5b 9c 76 7f 3b fb ae  |%...S..w.[.v.;..|
+D (32340) usb_terminal: 0x3fca3a50   9a cb 50 18 16 70 92 d0  00 00 10 18 00 04 4d 51  |..P..p........MQ|
+D (32350) usb_terminal: 0x3fca3a60   54 54 04 02 00 78 00 0c  45 53 50 33 32 5f 65 33  |TT...x..ESP32_e3|
+D (32360) usb_terminal: 0x3fca3a70   38 45 31 34 d4 b9 7e                              |8E14..~|
+D (32370) CDC_ACM: Submitting BULK OUT transfer
+D (32370) CDC_ACM: out/ctrl xfer cb
+D (32660) CDC_ACM: in xfer cb
+D (32660) usb_terminal: 0x3fca121c   7e 21 45 00 00 28 75 8c  40 00 27 06 d0 ab 89 87  |~!E..(u.@.'.....|
+D (32670) usb_terminal: 0x3fca122c   53 d9 0a 88 25 b0 07 5b  f2 77 fb ae 9a cb 9c 76  |S...%..[.w.....v|
+D (32680) usb_terminal: 0x3fca123c   7f 55 50 10 fa d6 fb 4b  00 00 f5 8a 7e           |.UP....K....~|
+D (32690) CDC_ACM: Submitting poll for BULK IN transfer
+D (32690) CDC_ACM: in xfer cb
+D (32690) usb_terminal: 0x3fca121c   7e 21 45 00 00 2c 75 8d  40 00 27 06 d0 a6 89 87  |~!E..,u.@.'.....|
+D (32700) usb_terminal: 0x3fca122c   53 d9 0a 88 25 b0 07 5b  f2 77 fb ae 9a cb 9c 76  |S...%..[.w.....v|
+D (32710) usb_terminal: 0x3fca123c   7f 55 50 18 fa d6 db 3d  00 00 20 02 00 00 50 98  |.UP....=.. ...P.|
+D (32720) usb_terminal: 0x3fca124c   7e                                                |~|
+D (32730) CDC_ACM: Submitting poll for BULK IN transfer
+D (32730) MQTT_CLIENT: mqtt_message_receive: first byte: 0x20
+D (32740) MQTT_CLIENT: mqtt_message_receive: read "remaining length" byte: 0x2
+D (32750) MQTT_CLIENT: mqtt_message_receive: total message length: 4 (already read: 2)
+D (32760) MQTT_CLIENT: mqtt_message_receive: read_len=2
+D (32760) MQTT_CLIENT: mqtt_message_receive: transport_read():4 4
+D (32770) MQTT_CLIENT: Connected
+D (32770) event: running post MQTT_EVENTS:1 with handler 0x42008100 and context 0x3fcf725c on loop 0x3fcf691c
+0x42008100: mqtt_event_handler at /home/pi/example/USB/pppos_client/main/pppos_client_main.c:66
+
+D (32780) pppos_example: Event dispatched from event loop base=MQTT_EVENTS, event_id=1
+I (32790) pppos_example: MQTT_EVENT_CONNECTED
+D (32790) MQTT_CLIENT: mqtt_enqueue id: 53029, type=8 successful
+D (32800) OUTBOX: ENQUEUE msgid=53029, msg_type=8, len=23, size=23
+D (32810) usb_terminal: 0x3fca3a30   7e 21 45 00 00 3f 00 04  00 00 ff 06 ae 1c 0a 88  |~!E..?..........|
+D (32820) usb_terminal: 0x3fca3a40   25 b0 89 87 53 d9 f2 77  07 5b 9c 76 7f 55 fb ae  |%...S..w.[.v.U..|
+D (32830) usb_terminal: 0x3fca3a50   9a cf 50 18 16 6c d5 d6  00 00 82 15 cf 25 00 10  |..P..l.......%..|
+D (32840) usb_terminal: 0x3fca3a60   2f 74 6f 70 69 63 2f 65  73 70 2d 70 70 70 6f 73  |/topic/esp-pppos|
+D (32850) usb_terminal: 0x3fca3a70   00 0f 9c 7e                                       |...~|
+D (32850) CDC_ACM: Submitting BULK OUT transfer
+D (32860) CDC_ACM: out/ctrl xfer cb
+D (32860) MQTT_CLIENT: Sent subscribe topic=/topic/esp-pppos, id: 53029, type=8 successful
+I (32870) pppos_example: sent subscribe successful, msg_id=53029
+D (32880) CDC_ACM: in xfer cb
+D (32880) usb_terminal: 0x3fca121c   7e 21 45 00 00 2c 75 91  40 00 27 06 d0 a2 89 87  |~!E..,u.@.'.....|
+D (32890) usb_terminal: 0x3fca122c   53 d9 0a 88 25 b0 07 5b  f2 77 fb ae 9a cb 9c 76  |S...%..[.w.....v|
+D (32900) usb_terminal: 0x3fca123c   7f 55 50 18 fa d6 db 3d  00 00 20 02 00 00 92 7b  |.UP....=.. ....{|
+D (32910) usb_terminal: 0x3fca124c   7e                                                |~|
+D (32920) usb_terminal: 0x3fca4618   7e 21 45 00 00 28 00 05  00 00 ff 06 ae 32 0a 88  |~!E..(.......2..|
+D (32930) usb_terminal: 0x3fca4628   25 b0 89 87 53 d9 f2 77  07 5b 9c 76 7f 6c fb ae  |%...S..w.[.v.l..|
+D (32940) usb_terminal: 0x3fca4638   9a cf 50 10 16 6c df 9b  00 00 5e 0b 7e           |..P..l....^.~|
+D (32950) CDC_ACM: Submitting BULK OUT transfer
+D (32950) CDC_ACM: Submitting poll for BULK IN transfer
+D (32960) CDC_ACM: out/ctrl xfer cb
+D (33140) CDC_ACM: in xfer cb
+D (33140) usb_terminal: 0x3fca121c   7e 21 45 00 00 28 75 8e  40 00 27 06 d0 a9 89 87  |~!E..(u.@.'.....|
+D (33140) usb_terminal: 0x3fca122c   53 d9 0a 88 25 b0 07 5b  f2 77 fb ae 9a cf 9c 76  |S...%..[.w.....v|
+D (33150) usb_terminal: 0x3fca123c   7f 6c 50 10 fa bf fb 47  00 00 ae 13 7e           |.lP....G....~|
+D (33160) CDC_ACM: Submitting poll for BULK IN transfer
+D (33170) CDC_ACM: in xfer cb
+D (33170) usb_terminal: 0x3fca121c   7e 21 45 00 00 2d 75 8f  40 00 27 06 d0 a3 89 87  |~!E..-u.@.'.....|
+D (33180) usb_terminal: 0x3fca122c   53 d9 0a 88 25 b0 07 5b  f2 77 fb ae 9a cf 9c 76  |S...%..[.w.....v|
+D (33190) usb_terminal: 0x3fca123c   7f 6c 50 18 fa bf 9c 11  00 00 90 03 cf 25 00 71  |.lP..........%.q|
+D (33200) usb_terminal: 0x3fca124c   7d 5e 7e                                          |}^~|
+D (33210) CDC_ACM: Submitting poll for BULK IN transfer
+D (33210) MQTT_CLIENT: mqtt_message_receive: first byte: 0x90
+D (33220) MQTT_CLIENT: mqtt_message_receive: read "remaining length" byte: 0x3
+D (33230) MQTT_CLIENT: mqtt_message_receive: total message length: 5 (already read: 2)
+D (33240) MQTT_CLIENT: mqtt_message_receive: read_len=3
+D (33240) MQTT_CLIENT: mqtt_message_receive: transport_read():5 5
+D (33250) MQTT_CLIENT: msg_type=9, msg_id=53029
+D (33250) MQTT_CLIENT: pending_id=53029, pending_msg_count = 1
+D (33260) OUTBOX: DELETED msgid=53029, msg_type=8, remain size=0
+D (33260) MQTT_CLIENT: deliver_suback, message_length_read=5, message_length=5
+D (33270) event: running post MQTT_EVENTS:3 with handler 0x42008100 and context 0x3fcf725c on loop 0x3fcf691c
+0x42008100: mqtt_event_handler at /home/pi/example/USB/pppos_client/main/pppos_client_main.c:66
+
+D (33280) pppos_example: Event dispatched from event loop base=MQTT_EVENTS, event_id=3
+I (33290) pppos_example: MQTT_EVENT_SUBSCRIBED, msg_id=53029
+D (33300) usb_terminal: 0x3fca3a30   7e 21 45 00 00 47 00 06  00 00 ff 06 ae 12 0a 88  |~!E..G..........|
+D (33300) usb_terminal: 0x3fca3a40   25 b0 89 87 53 d9 f2 77  07 5b 9c 76 7f 6c fb ae  |%...S..w.[.v.l..|
+D (33310) usb_terminal: 0x3fca3a50   9a d4 50 18 16 67 9b 21  00 00 30 1d 00 10 2f 74  |..P..g.!..0.../t|
+D (33320) usb_terminal: 0x3fca3a60   6f 70 69 63 2f 65 73 70  2d 70 70 70 6f 73 65 73  |opic/esp-ppposes|
+D (33330) usb_terminal: 0x3fca3a70   70 33 32 2d 70 70 70 6f  73 76 4d 7e              |p32-ppposvM~|
+D (33340) CDC_ACM: Submitting BULK OUT transfer
+D (33350) CDC_ACM: out/ctrl xfer cb
+I (33350) pppos_example: sent publish successful, msg_id=0
+D (34020) CDC_ACM: in xfer cb
+D (34020) usb_terminal: 0x3fca121c   7e 21 45 00 00 28 75 90  40 00 27 06 d0 a7 89 87  |~!E..(u.@.'.....|
+D (34020) usb_terminal: 0x3fca122c   53 d9 0a 88 25 b0 07 5b  f2 77 fb ae 9a d4 9c 76  |S...%..[.w.....v|
+D (34030) usb_terminal: 0x3fca123c   7f 8b 50 10 fa a0 fb 42  00 00 3a d2 7e           |..P....B..:.~|
+D (34040) CDC_ACM: Submitting poll for BULK IN transfer
+D (34040) CDC_ACM: in xfer cb
+D (34050) usb_terminal: 0x3fca121c   7e 21 45 00 00 47 75 91  40 00 27 06 d0 87 89 87  |~!E..Gu.@.'.....|
+D (34050) usb_terminal: 0x3fca122c   53 d9 0a 88 25 b0 07 5b  f2 77 fb ae 9a d4 9c 76  |S...%..[.w.....v|
+D (34060) usb_terminal: 0x3fca123c   7f 8b 50 18 fa a0 b6 c8  00 00 30 1d 00 10 2f 74  |..P.......0.../t|
+D (34070) usb_terminal: 0x3fca124c   6f 70 69 63 2f 65 73 70  2d 70 70 70 6f 73 65 73  |opic/esp-ppposes|
+D (34080) usb_terminal: 0x3fca125c   70 33 32 2d 70 70 70 6f  73 00 19 7e              |p32-pppos..~|
+D (34090) CDC_ACM: Submitting poll for BULK IN transfer
+D (34090) MQTT_CLIENT: mqtt_message_receive: first byte: 0x30
+D (34100) MQTT_CLIENT: mqtt_message_receive: read "remaining length" byte: 0x1d
+D (34110) MQTT_CLIENT: mqtt_message_receive: total message length: 31 (already read: 2)
+D (34120) MQTT_CLIENT: mqtt_message_receive: read_len=29
+D (34120) MQTT_CLIENT: mqtt_message_receive: transport_read():31 31
+D (34130) MQTT_CLIENT: msg_type=3, msg_id=0
+D (34140) MQTT_CLIENT: deliver_publish, message_length_read=31, message_length=31
+D (34140) MQTT_CLIENT: deliver_publish: msg_topic_len=16
+D (34150) MQTT_CLIENT: Get data len= 11, topic len=16, total_data: 11 offset: 0
+D (34150) usb_terminal: 0x3fcf74e8   7e 21 45 00 00 28 00 07  00 00 ff 06 ae 30 0a 88  |~!E..(.......0..|
+D (34160) event: running post MQTT_EVENTS:6 with handler 0x42008100 and context 0x3fcf725c on loop 0x3fcf691c
+0x42008100: mqtt_event_handler at /home/pi/example/USB/pppos_client/main/pppos_client_main.c:66
+
+D (34170) usb_terminal: 0x3fcf74f8   25 b0 89 87 53 d9 f2 77  07 5b 9c 76 7f 8b fb ae  |%...S..w.[.v....|
+D (34180) pppos_example: Event dispatched from event loop base=MQTT_EVENTS, event_id=6
+D (34190) usb_terminal: 0x3fcf7508   9a f3 50 10 16 48 df 7c  00 00 e8 63 7e           |..P..H.|...c~|
+I (34200) pppos_example: MQTT_EVENT_DATA
+TOPIC=/topic/esp-pppos
+DATA=esp32-pppos
+D (34210) CDC_ACM: Submitting BULK OUT transfer
+D (34220) CDC_ACM: out/ctrl xfer cb
+D (34220) usb_terminal: 0x3fca4010   7e 21 45 00 00 2a 00 08  00 00 ff 06 ae 2d 0a 88  |~!E..*.......-..|
+D (34230) usb_terminal: 0x3fca4020   25 b0 89 87 53 d9 f2 77  07 5b 9c 76 7f 8b fb ae  |%...S..w.[.v....|
+D (34240) usb_terminal: 0x3fca4030   9a f3 50 18 16 48 ff 71  00 00 e0 00 86 a5 7e     |..P..H.q......~|
+D (34250) CDC_ACM: Submitting BULK OUT transfer
+D (34250) CDC_ACM: out/ctrl xfer cb
+D (34550) CDC_ACM: in xfer cb
+D (34550) usb_terminal: 0x3fca121c   7e 21 45 00 00 28 75 92  40 00 27 06 d0 a5 89 87  |~!E..(u.@.'.....|
+D (34550) usb_terminal: 0x3fca122c   53 d9 0a 88 25 b0 07 5b  f2 77 fb ae 9a f3 9c 76  |S...%..[.w.....v|
+D (34560) usb_terminal: 0x3fca123c   7f 8d 50 11 fa 9e fb 22  00 00 36 14 7e           |..P...."..6.~|
+D (34580) usb_terminal: 0x3fcf74e8   7e 21 45 00 00 28 00 09  00 00 ff 06 ae 2e 0a 88  |~!E..(..........|
+D (34580) usb_terminal: 0x3fcf74f8   25 b0 89 87 53 d9 f2 77  07 5b 9c 76 7f 8d fb ae  |%...S..w.[.v....|
+D (34590) usb_terminal: 0x3fcf7508   9a f4 50 10 16 47 df 7a  00 00 0b 70 7e           |..P..G.z...p~|
+D (34600) CDC_ACM: Submitting BULK OUT transfer
+D (34610) CDC_ACM: Submitting poll for BULK IN transfer
+D (34610) CDC_ACM: out/ctrl xfer cb
+D (34620) usb_terminal: 0x3fcf74e8   7e 21 45 00 00 28 00 0a  00 00 ff 06 ae 2d 0a 88  |~!E..(.......-..|
+D (34630) usb_terminal: 0x3fcf74f8   25 b0 89 87 53 d9 f2 77  07 5b 9c 76 7f 8d fb ae  |%...S..w.[.v....|
+D (34630) usb_terminal: 0x3fcf7508   9a f4 50 11 16 47 df 79  00 00 b3 14 7e           |..P..G.y....~|
+D (34640) CDC_ACM: Submitting BULK OUT transfer
+D (34650) CDC_ACM: out/ctrl xfer cb
+D (34650) event: deleted loop 0x3fcf691c
+D (34660) esp_netif_handlers: esp_netif action stopped with netif0x3fcec17c from event_id=0
+D (34660) esp-netif_lwip-ppp: esp_netif_stop_ppp: Stopped PPP connection: 0x3fcec4ac
+D (34670) esp-netif_lwip-ppp: Phase Terminate
+D (34680) esp-netif_lwip-ppp: Phase Network
+D (34680) esp-netif_lwip-ppp: Phase Establish
+D (34690) usb_terminal: 0x3fcf5bcc   7e ff 7d 23 c0 21 7d 25  7d 22 7d 20 7d 30 55 73  |~.}#.!}%}"} }0Us|
+D (34700) usb_terminal: 0x3fcf5bdc   65 72 20 72 65 71 75 65  73 74 53 33 7e           |er requestS3~|
+D (34700) CDC_ACM: Submitting BULK OUT transfer
+D (34710) CDC_ACM: out/ctrl xfer cb
+D (34710) CDC_ACM: in xfer cb
+D (34720) usb_terminal: 0x3fca121c   7e ff 7d 23 c0 21 7d 26  7d 22 7d 20 7d 24 94 7d  |~.}#.!}&}"} }$.}|
+D (34730) usb_terminal: 0x3fca122c   2d 7e                                             |-~|
+D (34730) esp-netif_lwip-ppp: Phase Disconnect
+D (34740) esp-netif_lwip-ppp: Phase Dead
+I (34740) esp-netif_lwip-ppp: User interrupt
+D (34750) event: running post NETIF_PPP_STATUS:5 with handler 0x420080c4 and context 0x3fcec15c on loop 0x3fceb1d8
+0x420080c4: on_ppp_changed at /home/pi/example/USB/pppos_client/main/pppos_client_main.c:108
+
+I (34760) pppos_example: PPP state changed event 5
+I (34760) pppos_example: User interrupted event from netif:0x3fcec17c
+D (34770) event: running post NETIF_PPP_STATUS:5 with handler 0x4200ee04 and context 0x3fce9c20 on loop 0x3fceb1d8
+0x4200ee04: esp_modem::Netif::on_ppp_changed(void*, char const*, int, void*) at /home/pi/example/USB/pppos_client/managed_components/espressif__esp_modem/src/esp_modem_netif.cpp:22
+
+I (34780) esp_modem_netif: PPP state changed event 5
+D (34790) CDC_ACM: Submitting poll for BULK IN transfer
+D (34790) CDC_ACM: notif xfer cb
+D (34790) usb_terminal: Ignored USB event 1
+D (34800) CDC_ACM: Submitting poll for INTR IN transfer
+D (34800) CDC_ACM: in xfer cb
+D (34810) usb_terminal: 0x3fca121c   0d 0a 4e 4f 20 43 41 52  52 49 45 52 0d 0a        |..NO CARRIER..|
+D (34820) CDC_ACM: Submitting poll for BULK IN transfer
+D (34820) esp_netif_lwip: check: remote, if=0x3fcec17c fn=0x420247a8
+0x420247a8: esp_netif_update_default_netif_lwip at /home/pi/espressif/esp-adf/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:195
+
+
+D (34830) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fcec17c
+D (34840) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (37840) command_lib: generic_command command +++
+
+D (37840) usb_terminal: 0x3fca08f8   2b 2b 2b                                          |+++|
+D (37840) CDC_ACM: Submitting BULK OUT transfer
+D (37840) CDC_ACM: out/ctrl xfer cb
+D (43850) command_lib: generic_command command AT
+
+D (43850) usb_terminal: 0x3fca0928   41 54 0d                                          |AT.|
+D (43850) CDC_ACM: Submitting BULK OUT transfer
+D (43850) CDC_ACM: out/ctrl xfer cb
+D (43860) CDC_ACM: in xfer cb
+D (43860) usb_terminal: 0x3fca121c   0d 0a 4f 4b 0d 0a                                 |..OK..|
+D (43870) command_lib: Response: 
+OK
+
+
+D (43870) CDC_ACM: Submitting poll for BULK IN transfer
+D (43880) CDC_ACM: notif xfer cb
+D (43880) usb_terminal: Ignored USB event 1
+D (43880) CDC_ACM: Submitting poll for INTR IN transfer
+D (43890) usb_terminal: 0x3fca09e8   41 54 2b 43 49 4d 49 0d                           |AT+CIMI.|
+D (43900) CDC_ACM: Submitting BULK OUT transfer
+D (43900) CDC_ACM: out/ctrl xfer cb
+D (43910) CDC_ACM: in xfer cb
+D (43910) usb_terminal: 0x3fca121c   0d 0a 34 36 30 30 31 38  39 37 38 31 32 34 32 33  |..46001897812423|
+D (43920) usb_terminal: 0x3fca122c   31 0d 0a 0d 0a 4f 4b 0d  0a                       |1....OK..|
+D (43930) CDC_ACM: Submitting poll for BULK IN transfer
+D (43930) CDC_ACM: notif xfer cb
+D (43940) usb_terminal: Ignored USB event 1
+D (43940) CDC_ACM: Submitting poll for INTR IN transfer
+I (43950) pppos_example: IMSI=460018978124231
+I (43950) pppos_example: USB demo finished. Disconnect and connect the modem to run it again

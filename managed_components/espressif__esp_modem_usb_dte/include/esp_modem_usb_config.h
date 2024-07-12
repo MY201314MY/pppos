@@ -62,7 +62,7 @@ struct esp_modem_usb_term_config {
 /**
  * @brief Default configuration of Quectel BG96 modem
  */
-#define ESP_MODEM_BG96_USB_CONFIG()    ESP_MODEM_DEFAULT_USB_CONFIG(0x2C7C, 0x0296, 2)
+#define ESP_MODEM_BG96_USB_CONFIG()    ESP_MODEM_DEFAULT_USB_CONFIG(0x2C7C, 0x0125, 3)
 
 /**
  * @brief Default configuration of SimCom SIM7600E modem
